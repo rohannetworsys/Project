@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(uploads/login-bg.png);
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.content {
+    display: flex;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* width: fit-content; */
+    height: 66vh;
+    width: 54vw;
+}
+
+/* LEFT SIDE */
+.left {
+    width: 85%;
+    /* padding: 50px 60px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid gray;
+}
+
+.left-content {
+    padding: 40px 30px 40px 45px;
+}
+
+.logo {
+    width: 185px;
+    height: 71px;
+    margin-bottom: 20px;
+}
+
+.left h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* INPUTS */
+form {
+    padding: 1em;
+}
+
+form input[type="email"],
+input[type="password"] {
+    width: 95%;
+    padding: 12px 14px;
+    margin-bottom: 15px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+form input:focus {
+    border-color: #2f6fa3;
+}
+
+/* PASSWORD FIELD */
+.password-box {
+    position: relative;
+}
+
+.password-box i {
+    width: 35px;
+    height: 36px;
+    position: absolute;
+    right: 0px;
+    top: 13px;
+    color: #888;
+    cursor: pointer;
+}
+
+/* OPTIONS */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.options label {
+    color: #555;
+    display: flex;
+}
+
+.options a {
+    color: #2f6fa3;
+    text-decoration: none;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+.options span {
+    padding-left: 10px;
+}
+
+/* BUTTON */
+form button {
+    width: 100%;
+    padding: 12px;
+    background: #2780C3;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #255a84;
+}
+
+/* SOCIAL */
+.signin-text {
+    text-align: center;
+    margin: 25px 0 15px;
+    color: gray;
+    font-weight: 500;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social a {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social a img {
+    width: 60%;
+}
+
+.social button:hover {
+    background: #f1f1f1;
+}
+
+/* RIGHT SIDE */
+.right {
+    width: 40%;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+
+}
+
+.carousel {
+    overflow: hidden;
+    width: 80%;
+}
+
+.carousel-track {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: max-content;
+    gap: 15px;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-500px);
+    }
+}
+
+.building-img1 {
+    width: 220px;
+    margin-bottom: 25px;
+}
+
+.right h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.right p {
+    color: #777;
+    max-width: 300px;
+    font-size: 14px;
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 600px) {
+    .content {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+    }
+
+    .left {
+        width: 100%;
+        border-right: none;
+    }
+
+    .left-content {
+        padding: 20px;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .logo{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/* Tablet Responsiveness */
+@media only screen and (600px <= width <= 1024px) {
+    .content{
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .options {
+        flex-wrap: wrap;
+    }
+}
+
+/* @media (max-width: 455px)  {
+    .content {
+        flex-direction: column;
+        
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        height: auto;
+    }
+
+    .right {
+        padding: 30px 20px;
+    }
+} */
+
+
+/* DOTS */
+/* .dots {
+    margin-top: 20px;
+}
+
+.dots span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #ccc;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.dots .active {
+    width: 40px;
+    border-radius: 10px;
+    background: #2f6fa3;
+} */
