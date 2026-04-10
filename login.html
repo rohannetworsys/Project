@@ -27,23 +27,33 @@
 
                     <h2>Login</h2>
 
-                    <form>
-                        <input type="email" placeholder="Email id" required>
+                    <div class="box">
+                        <form>
+                            <div class="inputBox">
+                                <input type="email" name="email" required placeholder=" "
+                                    onkeyup="this.setAttribute('value', this.value);" value="">
+                                <label>Email id</label>
+                            </div>
 
-                        <div class="password-box">
-                            <input type="password" placeholder="Enter your password" required>
-                            <i class="fa-sharp fa-solid fa-eye-slash"></i>
-                        </div>
+                            <div class="password-box">
+                                <div class="inputBox">
+                                    <input type="password" id="password" name="text" required placeholder=" "
+                                        onkeyup="this.setAttribute('value', this.value);" value="">
+                                    <label>Enter your password</label>
+                                </div>
+                                <i class="fa-sharp fa-solid fa-eye-slash" id="togglePassword"></i>
+                            </div>
 
-                        <div class="options">
-                            <label>
-                                <input type="checkbox" checked> <span>Remember me</span>
-                            </label>
-                            <a href="#">Forgot password?</a>
-                        </div>
+                            <div class="options">
+                                <label>
+                                    <input type="checkbox" checked> <span>Remember me</span>
+                                </label>
+                                <a href="#">Forgot password?</a>
+                            </div>
 
-                        <button type="submit">Login</button>
-                    </form>
+                            <button type="submit">Login</button>
+                        </form>
+                    </div>
 
                     <p class="signin-text">Sign in with</p>
 
@@ -59,24 +69,31 @@
             <div class="right">
                 <div class="carousel">
 
-                    <div class="carousel-track">
-                        <div class="building1">
-                            <img src="./uploads/building-img1.png" alt="building" class="building-img1">
-                            <h2>Welcome to 2Morrow Real Estate</h2>
-                            <p>Find you place where dreams become reality</p>
-                        </div>
+                    <div class="mySlides fade">
+                        <img src="./uploads/building-img1.png" class="building-img">
 
-                        <div class="building2">
-                            <img src="./uploads/building-img1.png" alt="building" class="building-img1">
-                            <h2>Welcome to 2Morrow Real Estate</h2>
-                            <p>Find you place where dreams become reality</p>
-                        </div>
+                    </div>
 
-                        <div class="building3">
-                            <img src="./uploads/building-img1.png" alt="building" class="building-img1">
-                            <h2>Welcome to 2Morrow Real Estate</h2>
-                            <p>Find you place where dreams become reality</p>
-                        </div>
+                    <div class="mySlides fade">
+                        <img src="./uploads/building-img2.png" class="building-img">
+
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="./uploads/building-img3.png" class="building-img">
+
+                    </div>
+
+                    <div class="right-text">
+                        <h2>Welcome to 2Morrow Real Estate</h2>
+                        <p>Find your place where dreams become reality</p>
+                    </div>
+
+                    <!-- DOTS -->
+                    <div class="dots">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
                     </div>
 
                 </div>
